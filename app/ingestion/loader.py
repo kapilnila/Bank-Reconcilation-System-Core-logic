@@ -1,40 +1,56 @@
 import pandas as pd
+from app.ingestion.bai_parser import parse_bai_file
+from app.utils.logger import get_logger, log_success, log_failure
 
-def load_file(path):
+logger = get_logger()
 
-    transactions = []
 
-    with open(path, "r") as f:
-        for line in f:
+def load_file(path: str) -> pd.DataFrame:
 
-            line = line.strip()
+    try:
 
-            if not line:
-                continue
+        logger.info(f"Loading file: {path}")
 
-            parts = line.split(",")
+        # ---------- CSV ----------
+        if path.endswith(".csv"):
 
-            record_type = parts[0]
+            try:
+                df = pd.read_csv(path)
 
-            # Transaction detail
-            if record_type == "16":
+            except Exception:
 
-                try:
-                    amount = parts[2]
-                    description = parts[-1]
+                df = pd.read_csv(path, delimiter=";")
 
-                    amount = int(amount.replace("+","").replace("-",""))
+            if len(df.columns) == 1:
+                df = pd.read_csv(path, delimiter="|")
 
-                    transactions.append({
-                        "amount": amount,
-                        "description": description.strip()
-                    })
+        # ---------- EXCEL ----------
+        elif path.endswith(".xlsx") or path.endswith(".xls"):
 
-                except:
-                    continue
+            df = pd.read_excel(path)
 
-    df = pd.DataFrame(transactions)
+        # ---------- TXT ----------
+        elif path.endswith(".txt"):
 
-    print(f"Loaded {len(df)} transactions")
+            df = pd.read_csv(path, sep=None, engine="python")
 
-    return df
+        # ---------- BAI ----------
+        elif path.endswith(".bai"):
+
+            df = parse_bai_file(path)
+
+        else:
+
+            raise ValueError("Unsupported file format")
+
+        log_success(f"File loaded successfully: {path}")
+
+        print(f"Loaded {len(df)} transactions")
+
+        return df
+
+    except Exception as e:
+
+        log_failure(f"File loading failed: {path} | Error: {str(e)}")
+
+        raise

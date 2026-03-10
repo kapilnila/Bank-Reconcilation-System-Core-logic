@@ -3,3 +3,11 @@ rapidfuzz
 python-dateutil
 pydantic
 loguru
+
+# AI stack
+langchain
+langchain-community
+langchain-core
+faiss-cpu
+sentence-transformers
+openai

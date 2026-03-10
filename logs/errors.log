@@ -1,0 +1,2 @@
+2026-03-10 21:15:05.828 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: File loading failed: data/bank_statement.csv | Error: Error tokenizing data. C error: Expected 9 fields in line 3, saw 19
+
