@@ -1,0 +1,5 @@
+pandas
+rapidfuzz
+python-dateutil
+pydantic
+loguru
