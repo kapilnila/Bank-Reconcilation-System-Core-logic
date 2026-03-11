@@ -49,3 +49,12 @@
 2026-03-11 13:21:34.037 | INFO     | app.pipeline.reconciliation_pipeline:run_reconciliation:28 - Bank rows=176 | Yardi rows=107
 2026-03-11 13:21:34.038 | INFO     | app.pipeline.reconciliation_pipeline:run_reconciliation:41 - Using MERGE reconciliation engine
 2026-03-11 13:21:34.063 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Reconciliation completed
+2026-03-11 21:54:49.996 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-11 21:54:50.098 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-11 21:54:50.113 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-11 21:54:50.113 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-11 21:54:50.140 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-11 21:54:50.143 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-11 21:54:50.156 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-11 21:54:50.157 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:48 - Starting HEURISTIC HASH reconciliation engine
+2026-03-11 21:54:50.189 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HEURISTIC ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107

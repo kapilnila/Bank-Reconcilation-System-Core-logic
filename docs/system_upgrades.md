@@ -29,5 +29,7 @@ Version 0.7.1
 Added changed hash matching for entries larger than 20000 and fallback if merge fails
 
 Version 0.7.2
+Adding heuristic hash engine match
+
 
 
