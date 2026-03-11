@@ -11,3 +11,9 @@ Added logging system
 
 Version 0.4
 Added RAG AI explanation service
+
+Version 0.5
+Added and checked for all errors except langchian.chains import QA due to python version in rag_service
+
+Version 0.6
+Adding Hash Engine for O(n) time complexity

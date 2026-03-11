@@ -1,6 +1,6 @@
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.chains import RetrievalQA
+from langchain.chains import RetrievalQA 
 from langchain_openai import ChatOpenAI
 
 from app.utils.logger import log_success, log_failure

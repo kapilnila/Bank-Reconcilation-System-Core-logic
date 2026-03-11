@@ -8,3 +8,33 @@
 2026-03-10 21:17:41.542 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
 2026-03-10 21:17:41.589 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
 2026-03-10 21:17:41.605 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-11 12:01:52.172 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-11 12:01:52.322 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-11 12:01:52.324 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-11 12:01:52.356 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-11 12:01:52.357 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-11 12:01:52.387 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-11 12:01:52.397 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-11 12:07:29.436 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-11 12:07:29.454 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-11 12:07:29.455 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-11 12:07:29.459 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-11 12:07:29.460 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-11 12:07:29.480 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-11 12:07:29.494 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-11 12:28:59.448 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-11 12:28:59.477 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-11 12:28:59.478 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-11 12:28:59.482 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-11 12:28:59.484 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-11 12:28:59.545 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-11 12:28:59.557 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-11 13:03:54.143 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-11 13:03:54.171 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-11 13:03:54.191 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-11 13:03:54.195 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-11 13:03:54.201 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-11 13:03:54.202 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-11 13:03:54.214 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-11 13:03:54.215 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-11 13:03:54.254 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107

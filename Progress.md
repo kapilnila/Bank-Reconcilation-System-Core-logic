@@ -5,3 +5,5 @@
 5)made changes to logger.py file to make logging easier
 6)added memory_Store and langcgain in rag_service and embedding and faiss and huggingface embedding
 7) added Document
+8) Added and checked for all errors except langchian.chains import QA due to python version in rag_service
+9) Adding Hash engine mechanism

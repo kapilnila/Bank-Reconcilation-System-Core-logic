@@ -1,5 +1,5 @@
 from app.pipeline.reconciliation_pipeline import run_reconciliation
-from app.infrastructure.logger import get_logger
+
 
 if __name__ == "__main__":
 
@@ -8,14 +8,11 @@ if __name__ == "__main__":
         "data/yardi_transactions.bai"
     )
 
-    print("Matches Found:")
-    print(result["matches"])
+    print("\n====== RECONCILIATION RESULT ======\n")
 
-    print("\nMissing Transactions:")
-    print(result["missing"])
+    print(f"Total Bank Transactions: {result['bank_total']}")
+    print(f"Total Yardi Transactions: {result['yardi_total']}")
+    print(f"Exact Matches Found: {len(result['matches'])}")
 
-
-
-logger = get_logger("test")
-
-logger.info("Logger working")
+    print("\nSample Matches:\n")
+    print(result["matches"].head())
