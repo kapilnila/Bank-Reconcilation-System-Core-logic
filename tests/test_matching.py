@@ -1,11 +1,17 @@
-from app.matching.heuristic_hash_match import heuristic_hash_match
+from app.matching.candidate_engine import CandidateEngine
 from app.ingestion.loader import load_file
 from app.normalization.normalize import normalize_transactions
 
 
-bank = normalize_transactions(load_file("data/bank_statement.csv"), "bank")
-yardi = normalize_transactions(load_file("data/yardi_transactions.bai"), "yardi")
+yardi = normalize_transactions(
+    load_file("data/yardi_transactions.bai"),
+    "yardi"
+)
 
-result = heuristic_hash_match(bank, yardi)
+engine = CandidateEngine(yardi)
 
-print("Heuristic Matches:", len(result["matches"]))
+bank_row = yardi.iloc[0]
+
+cands = engine.generate(bank_row, 5)
+
+print("Candidates:", len(cands))

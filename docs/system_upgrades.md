@@ -31,5 +31,12 @@ Added changed hash matching for entries larger than 20000 and fallback if merge 
 Version 0.7.2
 Adding heuristic hash engine match
 
+Version 0.8.0 
+Adding AI learning loop and Mistmatch store
+
+Version 0.9.0
+Smart Candidate Generator Engine
+
+
 
 
