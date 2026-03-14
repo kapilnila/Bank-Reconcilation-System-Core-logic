@@ -80,3 +80,35 @@
 2026-03-12 22:09:55.455 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
 2026-03-12 22:09:55.457 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
 2026-03-12 22:09:55.510 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-13 14:11:13.454 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG service initialization failed: Error in __cdecl faiss::FileIOReader::FileIOReader(const char *) at D:\a\faiss-wheels\faiss-wheels\third-party\faiss\faiss\impl\io.cpp:70: Error: 'f' failed: could not open ai_memory\index.faiss for reading: No such file or directory
+2026-03-13 14:11:13.457 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: Error in __cdecl faiss::FileIOReader::FileIOReader(const char *) at D:\a\faiss-wheels\faiss-wheels\third-party\faiss\faiss\impl\io.cpp:70: Error: 'f' failed: could not open ai_memory\index.faiss for reading: No such file or directory
+2026-03-13 14:16:42.933 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG service initialization failed: name 'embeddings' is not defined
+2026-03-13 14:16:42.936 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: name 'embeddings' is not defined
+2026-03-14 19:56:10.054 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG service initialization failed: name 'embeddings' is not defined
+2026-03-14 19:56:10.058 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: name 'embeddings' is not defined
+2026-03-14 19:59:29.342 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: log_failure() takes 1 positional argument but 2 were given
+2026-03-14 20:12:17.564 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: log_failure() takes 1 positional argument but 2 were given
+2026-03-14 21:37:41.913 | INFO     | app.ai_services.rag_service:__init__:24 - Initializing RAG Service
+2026-03-14 21:39:21.831 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-14 21:39:25.551 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-14 21:39:29.928 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-14 21:39:29.929 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Match Suggester initialized
+2026-03-14 21:39:34.123 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-14 21:39:34.126 | INFO     | app.ai_services.rag_service:__init__:24 - Initializing RAG Service
+2026-03-14 21:39:38.521 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-14 21:39:40.339 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-14 21:39:40.340 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Learning Loop initialized
+2026-03-14 21:39:40.340 | INFO     | app.utils.logger:log_success:33 - SUCCESS: ReconciliationOrchestrator initialized
+2026-03-14 21:39:40.341 | INFO     | app.pipeline.reconciliation_orchestrator:run:38 - Starting FULL reconciliation workflow
+2026-03-14 21:39:40.342 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-14 21:39:40.400 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-14 21:39:40.426 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-14 21:39:40.428 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-14 21:39:40.466 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-14 21:39:40.467 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-14 21:39:40.475 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-14 21:39:40.502 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-14 21:39:40.540 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107
+2026-03-14 21:39:40.543 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:48 - Starting HEURISTIC HASH reconciliation engine
+2026-03-14 21:39:40.544 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Heuristic engine failed: 'list' object has no attribute 'iterrows'
+2026-03-14 21:39:40.547 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator failed: 'list' object has no attribute 'iterrows'

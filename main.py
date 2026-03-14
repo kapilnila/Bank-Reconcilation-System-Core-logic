@@ -1,14 +1,16 @@
-from app.pipeline.reconciliation_pipeline import run_reconciliation
+from app.pipeline.reconciliation_orchestrator import ReconciliationOrchestrator
 
 
 if __name__ == "__main__":
 
-    result = run_reconciliation(
+    orchestrator = ReconciliationOrchestrator()
+
+    result = orchestrator.run(
         "data/bank_statement.csv",
         "data/yardi_transactions.bai"
     )
 
-    print("\n====== RECONCILIATION SUMMARY ======\n")
+    print("\n====== FINAL RECONCILIATION REPORT ======\n")
 
     for k, v in result.items():
-        print(f"{k} : {v}")
+        print(f"{k}: {v}")

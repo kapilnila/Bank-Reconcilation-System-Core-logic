@@ -1,17 +1,9 @@
-from app.matching.candidate_engine import CandidateEngine
-from app.ingestion.loader import load_file
-from app.normalization.normalize import normalize_transactions
+from app.ai_services.rag_service import RagReconciliationService
 
+rag = RagReconciliationService()
 
-yardi = normalize_transactions(
-    load_file("data/yardi_transactions.bai"),
-    "yardi"
+print(
+    rag.explain_reconciliation(
+        "Bank transaction 500 amazon payment mismatch"
+    )
 )
-
-engine = CandidateEngine(yardi)
-
-bank_row = yardi.iloc[0]
-
-cands = engine.generate(bank_row, 5)
-
-print("Candidates:", len(cands))

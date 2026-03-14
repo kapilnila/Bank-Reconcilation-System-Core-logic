@@ -37,6 +37,11 @@ Adding AI learning loop and Mistmatch store
 Version 0.9.0
 Smart Candidate Generator Engine
 
+Version 0.10.0
+AI Match suggestion Engine
+
+Version 0.11.0
+Complete Reconcilation Workflow Engine
 
 
 
