@@ -112,3 +112,79 @@
 2026-03-14 21:39:40.543 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:48 - Starting HEURISTIC HASH reconciliation engine
 2026-03-14 21:39:40.544 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Heuristic engine failed: 'list' object has no attribute 'iterrows'
 2026-03-14 21:39:40.547 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator failed: 'list' object has no attribute 'iterrows'
+2026-03-14 22:28:52.159 | INFO     | app.ai_services.rag_service:__init__:24 - Initializing RAG Service
+2026-03-14 22:29:13.804 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-14 22:29:16.198 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-14 22:29:19.933 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-14 22:29:19.934 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Match Suggester initialized
+2026-03-14 22:29:23.880 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-14 22:29:23.881 | INFO     | app.ai_services.rag_service:__init__:24 - Initializing RAG Service
+2026-03-14 22:29:27.547 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-14 22:29:28.847 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-14 22:29:28.848 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Learning Loop initialized
+2026-03-14 22:29:28.849 | INFO     | app.utils.logger:log_success:33 - SUCCESS: ReconciliationOrchestrator initialized
+2026-03-14 22:29:28.849 | INFO     | app.pipeline.reconciliation_orchestrator:run:38 - Starting FULL reconciliation workflow
+2026-03-14 22:29:28.850 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-14 22:29:28.872 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-14 22:29:28.898 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-14 22:29:28.900 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-14 22:29:28.903 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-14 22:29:28.903 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-14 22:29:28.909 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-14 22:29:28.929 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-14 22:29:28.954 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107
+2026-03-14 22:29:28.955 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:48 - Starting HEURISTIC HASH reconciliation engine
+2026-03-14 22:29:28.956 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Heuristic engine failed: 'list' object has no attribute 'iterrows'
+2026-03-14 22:29:28.956 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator failed: 'list' object has no attribute 'iterrows'
+2026-03-16 20:14:16.661 | INFO     | app.ai_services.rag_service:__init__:24 - Initializing RAG Service
+2026-03-16 20:14:52.912 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-16 20:14:52.919 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:14:52.922 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:14:52.923 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:17:48.631 | INFO     | app.ai_services.rag_service:__init__:24 - Initializing RAG Service
+2026-03-16 20:18:14.862 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-16 20:18:14.867 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:18:14.869 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:18:14.871 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:43:59.876 | INFO     | app.ai_services.rag_service:__init__:29 - Initializing RAG Service
+2026-03-16 20:44:33.981 | INFO     | app.ai_services.rag_service:__init__:44 - Loaded existing vector DB
+2026-03-16 20:44:34.902 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  AsyncClient.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:44:34.905 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: 1 validation error for ChatOpenAI
+__root__
+  AsyncClient.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:44:34.906 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator init failed: 1 validation error for ChatOpenAI
+__root__
+  AsyncClient.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:47:10.281 | INFO     | app.ai_services.rag_service:__init__:23 - Initializing RAG Service
+2026-03-16 20:47:31.604 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-16 20:47:31.608 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:53:22.028 | INFO     | app.ai_services.rag_service:__init__:23 - Initializing RAG Service
+2026-03-16 20:53:43.043 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-16 20:53:43.047 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 21:01:43.143 | INFO     | app.ai_services.rag_service:__init__:23 - Initializing RAG Service
+2026-03-16 21:02:04.509 | INFO     | app.ai_services.rag_service:__init__:39 - Loaded existing vector DB
+2026-03-16 21:02:04.513 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: LLM init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 21:02:04.543 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-16 22:01:51.761 | INFO     | app.ai_services.rag_service:__init__:19 - Initializing RAG Service
+2026-03-16 22:02:19.770 | INFO     | app.ai_services.rag_service:__init__:37 - Loaded existing vector DB
+2026-03-16 22:02:19.772 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized

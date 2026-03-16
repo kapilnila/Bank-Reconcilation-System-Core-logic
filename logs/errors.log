@@ -10,3 +10,41 @@
 2026-03-14 20:12:17.564 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: log_failure() takes 1 positional argument but 2 were given
 2026-03-14 21:39:40.544 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Heuristic engine failed: 'list' object has no attribute 'iterrows'
 2026-03-14 21:39:40.547 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator failed: 'list' object has no attribute 'iterrows'
+2026-03-14 22:29:28.956 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Heuristic engine failed: 'list' object has no attribute 'iterrows'
+2026-03-14 22:29:28.956 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator failed: 'list' object has no attribute 'iterrows'
+2026-03-16 20:14:52.919 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:14:52.922 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:14:52.923 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:18:14.867 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:18:14.869 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:18:14.871 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:44:34.902 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  AsyncClient.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:44:34.905 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: AIMatchSuggester init failed: 1 validation error for ChatOpenAI
+__root__
+  AsyncClient.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:44:34.906 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator init failed: 1 validation error for ChatOpenAI
+__root__
+  AsyncClient.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:47:31.608 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 20:53:43.047 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: RAG init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)
+2026-03-16 21:02:04.513 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: LLM init failed: 1 validation error for ChatOpenAI
+__root__
+  Client.__init__() got an unexpected keyword argument 'proxies' (type=type_error)

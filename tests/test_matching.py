@@ -4,6 +4,6 @@ rag = RagReconciliationService()
 
 print(
     rag.explain_reconciliation(
-        "Bank transaction 500 amazon payment mismatch"
+        "Bank txn 500 amazon mismatch"
     )
 )

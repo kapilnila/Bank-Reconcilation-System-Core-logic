@@ -2,9 +2,6 @@ import os
 
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_core.documents import Document
-
-from langchain_openai import ChatOpenAI
 from langchain.chains import RetrievalQA
 
 from app.utils.logger import get_logger, log_success, log_failure
@@ -19,15 +16,16 @@ class RagReconciliationService:
 
     def __init__(self):
 
+        logger.info("Initializing RAG Service")
+
+        # ---------- EMBEDDINGS ----------
+        self.embeddings = HuggingFaceEmbeddings(
+            model_name="sentence-transformers/all-MiniLM-L6-v2"
+        )
+
+        # ---------- VECTOR DB ----------
         try:
 
-            logger.info("Initializing RAG Service")
-
-            self.embeddings = HuggingFaceEmbeddings(
-                model_name="sentence-transformers/all-MiniLM-L6-v2"
-            )
-
-            # ---------- Load or Create Vector DB ----------
             if os.path.exists(VECTOR_DB_PATH):
 
                 self.vector_store = FAISS.load_local(
@@ -40,71 +38,75 @@ class RagReconciliationService:
 
             else:
 
-                self.vector_store = FAISS.from_documents(
-                    [],
+                self.vector_store = FAISS.from_texts(
+                    ["initial reconciliation knowledge"],
                     self.embeddings
                 )
 
                 logger.info("Created new vector DB")
 
-            # ---------- LLM ----------
-            self.llm = ChatOpenAI(
-                temperature=0
-            )
-
-            # ---------- QA Chain ----------
-            self.qa_chain = RetrievalQA.from_chain_type(
-                llm=self.llm,
-                retriever=self.vector_store.as_retriever(
-                    search_kwargs={"k": 3}
-                )
-            )
-
-            log_success("RAG Service initialized")
-
         except Exception as e:
 
-            log_failure(f"RAG init failed: {e}")
+            log_failure(f"Vector DB load failed: {e}")
             raise
 
-    # ---------- Add New Knowledge ----------
+        # ---------- OPTIONAL LLM ----------
+        self.qa_chain = None
+
+        if os.getenv("ENABLE_LLM", "false").lower() == "true":
+
+            try:
+
+                from langchain_openai import ChatOpenAI
+
+                llm = ChatOpenAI(
+                    temperature=0,
+                    model="gpt-3.5-turbo"
+                )
+
+                self.qa_chain = RetrievalQA.from_chain_type(
+                    llm=llm,
+                    retriever=self.vector_store.as_retriever(
+                        search_kwargs={"k": 3}
+                    )
+                )
+
+                log_success("LLM enabled")
+
+            except Exception as llm_error:
+
+                log_failure(f"LLM init failed: {llm_error}")
+
+        log_success("RAG Service initialized")
+
+    # ---------- MEMORY ----------
     def add_memory(self, text):
 
         try:
-
-            doc = Document(page_content=str(text))
-
-            self.vector_store.add_documents([doc])
-
-            log_success("Memory added to vector DB")
+            self.vector_store.add_texts([str(text)])
+            log_success("Memory added")
 
         except Exception as e:
+            log_failure(f"Memory add failed: {e}")
 
-            log_failure(f"Add memory failed: {e}")
-
-    # ---------- Persist DB ----------
     def save_memory(self):
 
         try:
-
             self.vector_store.save_local(VECTOR_DB_PATH)
-
             log_success("Vector DB saved")
 
         except Exception as e:
-
             log_failure(f"Vector save failed: {e}")
 
-    # ---------- Ask AI ----------
+    # ---------- QUERY ----------
     def explain_reconciliation(self, query):
 
         try:
 
-            logger.info("Running RAG query")
+            if self.qa_chain is None:
+                return "AI unavailable"
 
-            result = self.qa_chain.run(query)
-
-            return result
+            return self.qa_chain.run(query)
 
         except Exception as e:
 
