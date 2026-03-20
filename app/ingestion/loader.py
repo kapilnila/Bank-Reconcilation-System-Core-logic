@@ -194,53 +194,63 @@ def _load_bai(path):
     with open(path, "r", errors="replace") as f:
         for raw_line in f:
 
-            line = raw_line.strip().rstrip("/").strip()
-            if not line:
-                continue
+            # BAI2 real delimiter is "/" not newline.
+            # Split each line on "/" so merged records (two records on one
+            # line separated by "/" with no newline) are each processed.
+            segments = raw_line.strip().split("/")
 
-            parts = [p.strip() for p in line.split(",")]
-            record_type = parts[0]
+            for segment in segments:
 
-            # ── Group Header ─────────────────────────────────────────────────
-            if record_type == "02" and len(parts) >= 5:
-                d = _parse_bai_date(parts[4])
-                if d is not None:
-                    current_date = d
+                line = segment.strip()
+                if not line:
+                    continue
 
-            # ── Account Identifier (fallback date source) ─────────────────────
-            elif record_type == "03" and len(parts) >= 4:
-                if current_date is None:
-                    d = _parse_bai_date(parts[3])
+                parts = [p.strip() for p in line.split(",")]
+                if not parts or not parts[0]:
+                    continue
+
+                record_type = parts[0]
+
+                # ── Group Header ──────────────────────────────────────────────
+                if record_type == "02" and len(parts) >= 5:
+                    d = _parse_bai_date(parts[4])
                     if d is not None:
                         current_date = d
 
-            # ── Transaction Detail ────────────────────────────────────────────
-            elif record_type == "16" and len(parts) >= 3:
-                try:
-                    amount      = _parse_amount(parts[2])
-                    bank_ref    = parts[4].strip() if len(parts) > 4 else ""
-                    cust_ref    = parts[5].strip() if len(parts) > 5 else ""
-                    reference   = bank_ref or cust_ref or ""
-                    description = " ".join(parts[6:]).strip() if len(parts) > 6 else ""
+                # ── Account Identifier (fallback date source) ─────────────────
+                elif record_type == "03" and len(parts) >= 4:
+                    if current_date is None:
+                        d = _parse_bai_date(parts[3])
+                        if d is not None:
+                            current_date = d
 
-                    last_row = {
-                        "date":        current_date,
-                        "amount":      amount,
-                        "description": description,
-                        "reference":   reference,
-                    }
-                    rows.append(last_row)
+                # ── Transaction Detail ────────────────────────────────────────
+                elif record_type == "16" and len(parts) >= 3:
+                    try:
+                        amount      = _parse_amount(parts[2])
+                        bank_ref    = parts[4].strip() if len(parts) > 4 else ""
+                        cust_ref    = parts[5].strip() if len(parts) > 5 else ""
+                        reference   = bank_ref or cust_ref or ""
+                        description = " ".join(parts[6:]).strip() if len(parts) > 6 else ""
 
-                except Exception as e:
-                    log_failure(f"BAI2 type-16 parse failed: {line!r} | {e}")
+                        last_row = {
+                            "date":        current_date,
+                            "amount":      amount,
+                            "description": description,
+                            "reference":   reference,
+                        }
+                        rows.append(last_row)
 
-            # ── Continuation record ───────────────────────────────────────────
-            elif record_type == "88" and last_row is not None:
-                extra = " ".join(parts[1:]).strip()
-                if extra:
-                    last_row["description"] = (
-                        last_row["description"] + " " + extra
-                    ).strip()
+                    except Exception as e:
+                        log_failure(f"BAI2 type-16 parse failed: {line!r} | {e}")
+
+                # ── Continuation record ───────────────────────────────────────
+                elif record_type == "88" and last_row is not None:
+                    extra = " ".join(parts[1:]).strip()
+                    if extra:
+                        last_row["description"] = (
+                            last_row["description"] + " " + extra
+                        ).strip()
 
     if not rows:
         log_failure(f"BAI2 parser produced 0 rows from: {path}")

@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     result = orchestrator.run(
         "data/bank_statement.csv",
-        "data/uploads/yardi_transactions.csv"
+        "data/uploads/yardi_transactions.bai"
     )
 
     print("\n====== FINAL RECONCILIATION REPORT ======\n")

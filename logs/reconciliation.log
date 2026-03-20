@@ -84,3 +84,142 @@
 2026-03-20 17:56:54.380 | INFO     | app.ingestion.loader:load_file:375 - Loading file: data/uploads/yardi_transactions.csv
 2026-03-20 17:56:54.388 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: File loading failed: data/uploads/yardi_transactions.csv | Could not parse CSV file: data/uploads/yardi_transactions.csv
 2026-03-20 17:56:54.391 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator failed: Could not parse CSV file: data/uploads/yardi_transactions.csv
+2026-03-20 18:05:18.947 | INFO     | app.ai_services.rag_service:__init__:18 - Initializing RAG Service
+2026-03-20 18:05:51.455 | INFO     | app.ai_services.rag_service:__init__:18 - Initializing RAG Service
+2026-03-20 18:06:01.631 | INFO     | app.ai_services.rag_service:__init__:45 - Created new vector DB
+2026-03-20 18:06:01.634 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-20 18:06:05.021 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-20 18:06:05.023 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Match Suggester initialized
+2026-03-20 18:06:08.427 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-20 18:06:08.429 | INFO     | app.ai_services.rag_service:__init__:18 - Initializing RAG Service
+2026-03-20 18:06:12.091 | INFO     | app.ai_services.rag_service:__init__:45 - Created new vector DB
+2026-03-20 18:06:12.092 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-20 18:06:12.093 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Learning Loop initialized
+2026-03-20 18:06:12.093 | INFO     | app.utils.logger:log_success:33 - SUCCESS: ReconciliationOrchestrator initialized
+2026-03-20 18:06:12.094 | INFO     | app.pipeline.reconciliation_orchestrator:run:39 - Starting FULL reconciliation workflow
+2026-03-20 18:06:12.095 | INFO     | app.ingestion.loader:load_file:375 - Loading file: data/bank_statement.csv
+2026-03-20 18:06:12.131 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded: data/bank_statement.csv → 77 transactions
+2026-03-20 18:06:12.133 | INFO     | app.ingestion.loader:load_file:407 - Loaded 77 normalized transactions
+2026-03-20 18:06:12.134 | INFO     | app.ingestion.loader:load_file:375 - Loading file: data/uploads/yardi_transactions.bai
+2026-03-20 18:06:12.151 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded: data/uploads/yardi_transactions.bai → 66 transactions
+2026-03-20 18:06:12.152 | INFO     | app.ingestion.loader:load_file:407 - Loaded 66 normalized transactions
+2026-03-20 18:06:12.165 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-20 18:06:12.172 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=30 | UnmatchedYardi=13
+2026-03-20 18:06:12.177 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:64 - Starting HEURISTIC HASH reconciliation engine
+2026-03-20 18:06:12.189 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HEURISTIC ENGINE COMPLETED | Matches=9
+2026-03-20 18:06:12.257 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.302 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.346 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.390 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.434 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.478 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.522 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.567 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.610 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.655 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.700 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.799 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.852 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.888 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.922 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.957 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:12.991 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:13.029 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:13.065 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:13.101 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:13.136 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:06:13.142 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Vector memory saved
+2026-03-20 18:06:13.143 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI learning processed 21 cases
+2026-03-20 18:06:13.144 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Full reconciliation workflow completed
+2026-03-20 18:33:56.453 | INFO     | app.ai_services.rag_service:__init__:18 - Initializing RAG Service
+2026-03-20 18:34:20.045 | INFO     | app.ai_services.rag_service:__init__:36 - Loaded existing vector DB
+2026-03-20 18:34:20.046 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-20 18:34:22.739 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-20 18:34:22.740 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Match Suggester initialized
+2026-03-20 18:34:25.626 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-20 18:34:25.627 | INFO     | app.ai_services.rag_service:__init__:18 - Initializing RAG Service
+2026-03-20 18:34:28.226 | INFO     | app.ai_services.rag_service:__init__:36 - Loaded existing vector DB
+2026-03-20 18:34:28.227 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-20 18:34:28.228 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Learning Loop initialized
+2026-03-20 18:34:28.228 | INFO     | app.utils.logger:log_success:33 - SUCCESS: ReconciliationOrchestrator initialized
+2026-03-20 18:34:28.229 | INFO     | app.pipeline.reconciliation_orchestrator:run:39 - Starting FULL reconciliation workflow
+2026-03-20 18:34:28.230 | INFO     | app.ingestion.loader:load_file:380 - Loading file: data/bank_statement.csv
+2026-03-20 18:34:28.299 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded: data/bank_statement.csv → 77 transactions
+2026-03-20 18:34:28.300 | INFO     | app.ingestion.loader:load_file:412 - Loaded 77 normalized transactions
+2026-03-20 18:34:28.301 | INFO     | app.ingestion.loader:load_file:380 - Loading file: data/uploads/yardi_transactions.bai
+2026-03-20 18:34:28.340 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded: data/uploads/yardi_transactions.bai → 66 transactions
+2026-03-20 18:34:28.343 | INFO     | app.ingestion.loader:load_file:412 - Loaded 66 normalized transactions
+2026-03-20 18:34:28.361 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-20 18:34:28.371 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=30 | UnmatchedYardi=13
+2026-03-20 18:34:28.377 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:64 - Starting HEURISTIC HASH reconciliation engine
+2026-03-20 18:34:28.392 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HEURISTIC ENGINE COMPLETED | Matches=9
+2026-03-20 18:34:28.619 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.665 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.706 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.740 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.771 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.803 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.842 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.874 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.903 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.934 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.964 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:28.991 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.024 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.058 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.087 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.120 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.151 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.178 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.205 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.238 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.269 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:34:29.276 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Vector memory saved
+2026-03-20 18:34:29.277 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI learning processed 21 cases
+2026-03-20 18:34:29.278 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Full reconciliation workflow completed
+2026-03-20 18:40:50.086 | INFO     | app.ai_services.rag_service:__init__:18 - Initializing RAG Service
+2026-03-20 18:40:57.604 | INFO     | app.ai_services.rag_service:__init__:36 - Loaded existing vector DB
+2026-03-20 18:40:57.605 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-20 18:41:00.238 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-20 18:41:00.239 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Match Suggester initialized
+2026-03-20 18:41:02.878 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-20 18:41:02.879 | INFO     | app.ai_services.rag_service:__init__:18 - Initializing RAG Service
+2026-03-20 18:41:05.549 | INFO     | app.ai_services.rag_service:__init__:36 - Loaded existing vector DB
+2026-03-20 18:41:05.551 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-20 18:41:05.552 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Learning Loop initialized
+2026-03-20 18:41:05.553 | INFO     | app.utils.logger:log_success:33 - SUCCESS: ReconciliationOrchestrator initialized
+2026-03-20 18:41:05.554 | INFO     | app.pipeline.reconciliation_orchestrator:run:39 - Starting FULL reconciliation workflow
+2026-03-20 18:41:05.554 | INFO     | app.ingestion.loader:load_file:385 - Loading file: data/bank_statement.csv
+2026-03-20 18:41:05.580 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded: data/bank_statement.csv → 77 transactions
+2026-03-20 18:41:05.582 | INFO     | app.ingestion.loader:load_file:417 - Loaded 77 normalized transactions
+2026-03-20 18:41:05.588 | INFO     | app.ingestion.loader:load_file:385 - Loading file: data/uploads/yardi_transactions.bai
+2026-03-20 18:41:05.605 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded: data/uploads/yardi_transactions.bai → 66 transactions
+2026-03-20 18:41:05.607 | INFO     | app.ingestion.loader:load_file:417 - Loaded 66 normalized transactions
+2026-03-20 18:41:05.617 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-20 18:41:05.624 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=30 | UnmatchedYardi=13
+2026-03-20 18:41:05.629 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:64 - Starting HEURISTIC HASH reconciliation engine
+2026-03-20 18:41:05.636 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HEURISTIC ENGINE COMPLETED | Matches=9
+2026-03-20 18:41:05.738 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:05.775 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:05.820 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:05.857 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:05.891 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:05.923 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:05.955 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:05.986 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.017 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.048 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.075 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.104 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.132 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.161 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.190 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.218 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.247 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.274 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.301 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.330 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.359 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Mismatch stored in vector memory
+2026-03-20 18:41:06.365 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Vector memory saved
+2026-03-20 18:41:06.366 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI learning processed 21 cases
+2026-03-20 18:41:06.367 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Full reconciliation workflow completed
