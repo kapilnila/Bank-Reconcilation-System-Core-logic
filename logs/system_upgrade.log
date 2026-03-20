@@ -188,3 +188,147 @@ __root__
 2026-03-16 22:01:51.761 | INFO     | app.ai_services.rag_service:__init__:19 - Initializing RAG Service
 2026-03-16 22:02:19.770 | INFO     | app.ai_services.rag_service:__init__:37 - Loaded existing vector DB
 2026-03-16 22:02:19.772 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-17 21:02:17.404 | INFO     | app.ai_services.rag_service:__init__:19 - Initializing RAG Service
+2026-03-17 21:03:51.221 | INFO     | app.ai_services.rag_service:__init__:37 - Loaded existing vector DB
+2026-03-17 21:03:51.224 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-17 21:03:54.991 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-17 21:03:54.993 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Match Suggester initialized
+2026-03-17 21:03:58.252 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-17 21:03:58.253 | INFO     | app.ai_services.rag_service:__init__:19 - Initializing RAG Service
+2026-03-17 21:04:01.731 | INFO     | app.ai_services.rag_service:__init__:37 - Loaded existing vector DB
+2026-03-17 21:04:01.734 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-17 21:04:01.736 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Learning Loop initialized
+2026-03-17 21:04:01.737 | INFO     | app.utils.logger:log_success:33 - SUCCESS: ReconciliationOrchestrator initialized
+2026-03-17 21:04:01.738 | INFO     | app.pipeline.reconciliation_orchestrator:run:38 - Starting FULL reconciliation workflow
+2026-03-17 21:04:01.739 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-17 21:04:01.807 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-17 21:04:01.847 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-17 21:04:01.848 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-17 21:04:01.891 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-17 21:04:01.892 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-17 21:04:01.900 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-17 21:04:01.916 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-17 21:04:01.960 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107
+2026-03-17 21:04:01.962 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:48 - Starting HEURISTIC HASH reconciliation engine
+2026-03-17 21:04:01.963 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Heuristic engine failed: 'list' object has no attribute 'iterrows'
+2026-03-17 21:04:01.966 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator failed: 'list' object has no attribute 'iterrows'
+2026-03-17 22:21:04.547 | INFO     | app.ai_services.rag_service:__init__:19 - Initializing RAG Service
+2026-03-17 22:24:00.388 | INFO     | app.ai_services.rag_service:__init__:37 - Loaded existing vector DB
+2026-03-17 22:24:00.396 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-17 22:24:03.724 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-17 22:24:03.725 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Match Suggester initialized
+2026-03-17 22:24:06.534 | INFO     | app.utils.logger:log_success:33 - SUCCESS: MismatchStore initialized
+2026-03-17 22:24:06.536 | INFO     | app.ai_services.rag_service:__init__:19 - Initializing RAG Service
+2026-03-17 22:24:09.342 | INFO     | app.ai_services.rag_service:__init__:37 - Loaded existing vector DB
+2026-03-17 22:24:09.343 | INFO     | app.utils.logger:log_success:33 - SUCCESS: RAG Service initialized
+2026-03-17 22:24:09.345 | INFO     | app.utils.logger:log_success:33 - SUCCESS: AI Learning Loop initialized
+2026-03-17 22:24:09.346 | INFO     | app.utils.logger:log_success:33 - SUCCESS: ReconciliationOrchestrator initialized
+2026-03-17 22:24:09.347 | INFO     | app.pipeline.reconciliation_orchestrator:run:38 - Starting FULL reconciliation workflow
+2026-03-17 22:24:09.353 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-17 22:24:09.423 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-17 22:24:09.467 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-17 22:24:09.472 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-17 22:24:09.520 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-17 22:24:09.523 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-17 22:24:09.534 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-17 22:24:09.565 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-17 22:24:09.606 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107
+2026-03-17 22:24:09.608 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:48 - Starting HEURISTIC HASH reconciliation engine
+2026-03-17 22:24:09.609 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Heuristic engine failed: 'list' object has no attribute 'iterrows'
+2026-03-17 22:24:09.612 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Orchestrator failed: 'list' object has no attribute 'iterrows'
+2026-03-17 22:50:06.615 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-17 22:50:06.637 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-17 22:50:06.653 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-17 22:50:06.654 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-17 22:50:06.657 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-17 22:50:06.659 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-17 22:50:06.682 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-17 22:50:06.697 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-17 22:50:06.809 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107
+2026-03-17 22:50:06.812 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:48 - Starting HEURISTIC HASH reconciliation engine
+2026-03-17 22:50:06.814 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Heuristic engine failed: 'list' object has no attribute 'iterrows'
+2026-03-17 22:56:35.760 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-17 22:56:35.785 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-17 22:56:35.804 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-17 22:56:35.805 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-17 22:56:35.829 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-17 22:56:35.830 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-17 22:56:35.844 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-17 22:56:35.856 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-17 22:56:35.897 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107
+2026-03-17 22:56:35.900 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:64 - Starting HEURISTIC HASH reconciliation engine
+2026-03-17 22:56:35.947 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HEURISTIC ENGINE COMPLETED | Matches=0
+2026-03-17 22:57:56.414 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-17 22:57:56.426 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: File loading failed: data/bank_statement.csv | Error: [Errno 2] No such file or directory: 'data/bank_statement.csv'
+2026-03-17 22:58:31.988 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-17 22:58:32.011 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-17 22:58:32.031 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-17 22:58:32.033 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-17 22:58:32.034 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: BAI parsing failed: data/yardi_transactions.bai | Error: [Errno 2] No such file or directory: 'data/yardi_transactions.bai'
+2026-03-17 22:58:32.045 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: File loading failed: data/yardi_transactions.bai | Error: [Errno 2] No such file or directory: 'data/yardi_transactions.bai'
+2026-03-17 22:58:55.349 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-17 22:58:55.370 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-17 22:58:55.383 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-17 22:58:55.386 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-17 22:58:55.391 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-17 22:58:55.393 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-17 22:58:55.423 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-17 22:58:55.436 | INFO     | app.matching.hash_match:hash_match:23 - Starting HASH reconciliation engine
+2026-03-17 22:58:55.489 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HASH ENGINE COMPLETED | Matches=0 | UnmatchedBank=176 | UnmatchedYardi=107
+2026-03-17 22:58:55.491 | INFO     | app.matching.heuristic_hash_match:heuristic_hash_match:64 - Starting HEURISTIC HASH reconciliation engine
+2026-03-17 22:58:55.534 | INFO     | app.utils.logger:log_success:33 - SUCCESS: HEURISTIC ENGINE COMPLETED | Matches=0
+2026-03-18 20:04:36.994 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-18 20:04:37.080 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-18 20:04:37.095 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-18 20:04:37.096 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-18 20:04:37.099 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-18 20:04:37.100 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-18 20:04:37.112 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-18 20:05:57.669 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-18 20:05:57.686 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-18 20:05:57.704 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-18 20:05:57.705 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-18 20:05:57.709 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-18 20:05:57.715 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-18 20:05:57.723 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-18 20:08:07.433 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-18 20:08:07.454 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-18 20:08:07.507 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-18 20:08:07.509 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-18 20:08:07.514 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-18 20:08:07.515 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-18 20:08:07.525 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-18 20:12:05.952 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/bank_statement.csv
+2026-03-18 20:12:05.971 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/bank_statement.csv
+2026-03-18 20:12:05.985 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-18 20:12:05.987 | INFO     | app.ingestion.loader:load_file:12 - Loading file: data/yardi_transactions.bai
+2026-03-18 20:12:05.991 | INFO     | app.utils.logger:log_success:33 - SUCCESS: BAI file parsed successfully: data/yardi_transactions.bai
+2026-03-18 20:12:05.992 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded successfully: data/yardi_transactions.bai
+2026-03-18 20:12:06.003 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-18 20:20:00.934 | INFO     | app.ingestion.loader:load_file:188 - Loading file: data/bank_statement.csv
+2026-03-18 20:20:00.982 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded + normalized: data/bank_statement.csv
+2026-03-18 20:20:00.993 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-18 20:20:00.995 | INFO     | app.ingestion.loader:load_file:188 - Loading file: data/yardi_transactions.bai
+2026-03-18 20:20:01.026 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded + normalized: data/yardi_transactions.bai
+2026-03-18 20:20:01.033 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-18 20:21:22.239 | INFO     | app.ingestion.loader:load_file:189 - Loading file: data/bank_statement.csv
+2026-03-18 20:21:22.285 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded + normalized: data/bank_statement.csv
+2026-03-18 20:21:22.404 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for bank
+2026-03-18 20:21:22.409 | INFO     | app.ingestion.loader:load_file:189 - Loading file: data/yardi_transactions.bai
+2026-03-18 20:21:22.455 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded + normalized: data/yardi_transactions.bai
+2026-03-18 20:21:22.465 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Normalization completed for yardi
+2026-03-18 20:31:02.035 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Upload failed: File not found on local system
+2026-03-18 20:31:50.716 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Upload failed: File not found on local system
+2026-03-18 21:41:38.480 | ERROR    | app.utils.logger:log_failure:37 - FAILURE: Upload failed: File not found on local system
+2026-03-18 21:42:42.470 | INFO     | app.ingestion.file_manager:upload_and_normalize:52 - File uploaded to data/uploads\txn_2ec16eb7f8.csv
+2026-03-18 21:42:42.472 | INFO     | app.ingestion.loader:load_file:189 - Loading file: data/uploads\txn_2ec16eb7f8.csv
+2026-03-18 21:42:42.565 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded + normalized: data/uploads\txn_2ec16eb7f8.csv
+2026-03-18 21:42:42.568 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Upload + normalization completed: txn_2ec16eb7f8.csv
+2026-03-18 21:53:12.794 | INFO     | app.ingestion.file_manager:upload_and_normalize:52 - File uploaded to data/uploads\txn_29534c7b7d.csv
+2026-03-18 21:53:12.797 | INFO     | app.ingestion.loader:load_file:189 - Loading file: data/uploads\txn_29534c7b7d.csv
+2026-03-18 21:53:12.882 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded + normalized: data/uploads\txn_29534c7b7d.csv
+2026-03-18 21:53:12.884 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Upload + normalization completed: txn_29534c7b7d.csv
+2026-03-19 18:18:48.153 | INFO     | app.ingestion.file_manager:upload_and_normalize:52 - File uploaded to data/uploads\txn_75b32e4092.csv
+2026-03-19 18:18:48.157 | INFO     | app.ingestion.loader:load_file:189 - Loading file: data/uploads\txn_75b32e4092.csv
+2026-03-19 18:18:48.282 | INFO     | app.utils.logger:log_success:33 - SUCCESS: File loaded + normalized: data/uploads\txn_75b32e4092.csv
+2026-03-19 18:18:48.284 | INFO     | app.utils.logger:log_success:33 - SUCCESS: Upload + normalization completed: txn_75b32e4092.csv

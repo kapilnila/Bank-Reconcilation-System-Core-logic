@@ -42,6 +42,13 @@ AI Match suggestion Engine
 
 Version 0.11.0
 Complete Reconcilation Workflow Engine
+Orchestration Code
+
+Version 0.12.0
+Went ahead with langchain-community huggingface embedding error by following try an dexcept block in rag_service
+
+Version 0.13.0
+
 
 
 
