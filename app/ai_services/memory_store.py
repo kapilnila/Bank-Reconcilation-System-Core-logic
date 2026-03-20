@@ -1,5 +1,10 @@
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+# BEFORE
+
+
+# AFTER
+from langchain_huggingface import HuggingFaceEmbeddings
+
 from langchain_core.documents import Document
 
 from app.utils.logger import log_success

@@ -1,8 +1,7 @@
 import os
 
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.chains import RetrievalQA
+from langchain_huggingface import HuggingFaceEmbeddings
 
 from app.utils.logger import get_logger, log_success, log_failure
 
@@ -51,12 +50,15 @@ class RagReconciliationService:
             raise
 
         # ---------- OPTIONAL LLM ----------
+        # RetrievalQA is imported lazily here to avoid the
+        # langchain_core.pydantic_v1 crash when ENABLE_LLM=false
         self.qa_chain = None
 
         if os.getenv("ENABLE_LLM", "false").lower() == "true":
 
             try:
 
+                from langchain.chains import RetrievalQA
                 from langchain_openai import ChatOpenAI
 
                 llm = ChatOpenAI(

@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from app.pipeline.reconciliation_orchestrator import ReconciliationOrchestrator
 
 
@@ -7,7 +10,7 @@ if __name__ == "__main__":
 
     result = orchestrator.run(
         "data/bank_statement.csv",
-        "data/yardi_transactions.bai"
+        "data/uploads/yardi_transactions.csv"
     )
 
     print("\n====== FINAL RECONCILIATION REPORT ======\n")

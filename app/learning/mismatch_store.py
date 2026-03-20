@@ -1,6 +1,6 @@
 import os
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 
 from app.utils.logger import log_success, log_failure
@@ -15,7 +15,9 @@ class MismatchStore:
 
         try:
 
-            self.embeddings = HuggingFaceEmbeddings()
+            self.embeddings = HuggingFaceEmbeddings(
+                model_name="sentence-transformers/all-MiniLM-L6-v2"
+            )
 
             if os.path.exists(VECTOR_PATH):
 
@@ -27,7 +29,12 @@ class MismatchStore:
 
             else:
 
-                self.vectordb = FAISS.from_documents([], self.embeddings)
+                # FAISS requires at least one document to initialise the index.
+                # This seed doc is never surfaced to the user.
+                self.vectordb = FAISS.from_documents(
+                    [Document(page_content="reconciliation mismatch store initialised")],
+                    self.embeddings
+                )
 
             log_success("MismatchStore initialized")
 

@@ -1,7 +1,7 @@
 from app.learning.mismatch_store import MismatchStore
 from app.ai_services.rag_service import RagReconciliationService
 from app.utils.logger import log_success, log_failure
-
+import pandas as pd
 
 class AILearningLoop:
 
@@ -25,7 +25,8 @@ class AILearningLoop:
 
             total_cases = 0
 
-            for bank_row in unmatched_bank[:50]:
+            bank_data = unmatched_bank if isinstance(unmatched_bank, list) else unmatched_bank.to_dict("records")
+            for bank_row in bank_data[:50]:
 
                 query = f"""
                 Bank transaction mismatch:
